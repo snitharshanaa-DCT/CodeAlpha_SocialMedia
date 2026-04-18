@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Social App</title>
+</head>
+<body>
+
+<h1>Post Something</h1>
+
+<input type="text" id="postInput">
+<button onclick="addPost()">Post</button>
+
+<ul id="posts"></ul>
+
+<script>
+function addPost() {
+    let input = document.getElementById("postInput");
+    let post = input.value;
+
+    let li = document.createElement("li");
+    li.textContent = post;
+
+    document.getElementById("posts").appendChild(li);
+    input.value = "";
+}
+</script>
+
+</body>
+</html>
